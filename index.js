@@ -1,7 +1,9 @@
 const binaryAgent = (str) => {
   str = str.split(" ")
-  let newMap = str.map(item => String.fromCharCode(parseInt(item, 2)))
-  newMap = newMap.join("")
+
+  // first I convert binary to UTF-16 with parseInt
+  // then from UTF-16 to a string
+  let newMap = str.map(item => String.fromCharCode(parseInt(item, 2))).join("")
   return newMap
 }
 
